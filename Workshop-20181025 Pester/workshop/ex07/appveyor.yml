@@ -1,0 +1,8 @@
+version: 1.0.{build}
+image:
+- Visual Studio 2017
+install:
+- ps: Install-Module Pester -Force -SkipPublisherCheck -Scope CurrentUser
+build: off
+test_script:
+- ps: Invoke-Pester -EnableExit
